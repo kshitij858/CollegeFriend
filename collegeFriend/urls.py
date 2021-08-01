@@ -20,12 +20,10 @@ from college import views
 
 router = routers.DefaultRouter()
 router.register(r'course', views.CourseViewSet)
+router.register('professor', views.ProfessorViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('course/<int:pk>', views.CourseDetail.as_view()),
-    path('professor/', views.ProfessorList.as_view()),
-    path('professor/<int:pk>', views.ProfessorDetail.as_view())
 
 ]

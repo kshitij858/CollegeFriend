@@ -23,16 +23,6 @@ class CourseViewSet(viewsets.ModelViewSet):
     #    querysetself.request.query_params.get('code')
 
 
-class CourseDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Course.objects.all()
-    serializer_class = CourseSerializer
-
-
-class ProfessorList(generics.ListCreateAPIView):
-    queryset = Professor.objects.all()
-    serializer_class = ProfessorSerializer
-
-
-class ProfessorDetail(generics.RetrieveUpdateDestroyAPIView):
+class ProfessorViewSet(viewsets.ModelViewSet):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
