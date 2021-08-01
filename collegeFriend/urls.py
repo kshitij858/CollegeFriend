@@ -19,7 +19,7 @@ from rest_framework import routers
 from college import views
 
 router = routers.DefaultRouter()
-router.register(r'courses', views.CourseViewSet)
+router.register(r'course', views.CourseViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

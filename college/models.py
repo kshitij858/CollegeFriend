@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Professors(models.Model):
+class Professor(models.Model):
     id = models.IntegerField(primary_key=True)
     firstName = models.CharField(max_length=30)
     lastName = models.CharField(max_length=30)
@@ -12,8 +12,8 @@ class Professors(models.Model):
         return self.firstName
 
 
-class Courses(models.Model):
+class Course(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=30)
     code = models.CharField(max_length=10)
-    professors = models.ManyToManyField('Professors', blank=True)
+    professors = models.ManyToManyField('Professor', blank=True)

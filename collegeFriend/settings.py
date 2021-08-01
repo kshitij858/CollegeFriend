@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'college',
-    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -70,11 +69,7 @@ TEMPLATES = [
         },
     },
 ]
-INTERNAL_IPS = [
-    # ...
-    '127.0.0.1:8000',
-    # ...
-]
+
 WSGI_APPLICATION = 'collegeFriend.wsgi.application'
 
 
